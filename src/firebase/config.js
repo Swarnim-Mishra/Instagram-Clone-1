@@ -1,10 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import firebase from "firebase";
 
-// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDPGN00hQkkwW3RLeW2mNVSjsLIIHJnfhY",
   authDomain: "instagram-best-fe658.firebaseapp.com",
@@ -14,11 +10,8 @@ const firebaseConfig = {
   appId: "1:364014418335:web:db7bd96f263995d38525aa"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-content_copy
-
-
-firebase.initializeApp(firebaseConfig);
-export const auth = firebase.auth();
+export const auth = firebaseApp.auth();
+export const storage = firebaseApp.storage();
+export const db = firebaseApp.firestore();
